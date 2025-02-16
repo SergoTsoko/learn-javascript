@@ -96,3 +96,44 @@ function min(a, b) {
 //   я тут не совсем понял что происходит, думаю что это не очень важная деталь.
 //    Но если это не так и мне нужно его знать
 //   скажи и я вернусь к этому вопросу
+
+
+// https://learn.javascript.ru/arrow-functions-basics#perepishite-s-ispolzovaniem-funktsii-strelki
+// Стрелочные функции 
+// Замените код Function Expression стрелочной функцией:
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Вы согласны?",
+  function() { alert("Вы согласились."); },
+  function() { alert("Вы отменили выполнение."); }
+);
+
+// мое решение
+function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+  }
+  
+//   ask(
+//     "Вы согласны?",
+//     () => alert("Вы согласились."); },
+//     () => alert("Вы отменили выполнение."); }
+//   );
+
+//   учебник
+  function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+  }
+  
+  ask(
+    "Вы согласны?",
+    () => alert("Вы согласились."),
+    () => alert("Вы отменили выполнение.")
+  );
+  
