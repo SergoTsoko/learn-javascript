@@ -1,16 +1,19 @@
-let i = 2;
-for (; i < 12; ++i){
-  if (i % 2) continue;
-  alert(i);
 
-}
 // При помощи цикла for выведите чётные числа от 2 до 10.
-// ответ
+// /мое решение
+for (let i = 2; i <= 10; i++){
+  if (i % 2 ) continue;
+  console.log (i); 
+}
+
+
+// ответ учебника
 for (let i = 2; i <= 10; i++) {
     if (i % 2 == 0) {
       alert( i );
     }
   }
+
 
 //   Перепишите код, заменив цикл for на while, без изменения поведения цикла.
 
@@ -21,11 +24,11 @@ for (let i = 0; i < 3; i++) {
 
     // Мое решение:
     // let i = 0;
-while (i<3){
-  console.log(i);
-  i++
-  alert (`number${i}!`)
-}
+    let i = 0;
+    while (i < 3) {
+      i++
+      alert( `number ${i}!` );
+    }
 
 // Учебник: 
 // let i = 0;
@@ -46,6 +49,8 @@ if (number < 100 || number ==!null ){
 else if (number > 100) {
   alert("Well done. You are Genius)")
 }
+// если number меньше 100 и он не нулл мой код спрашивал только один раз. А нужно спрашивать
+// то тех пор пока условие не выполнится
 
 // Учебник:
 // let num;
