@@ -1,0 +1,133 @@
+Создайте объект calculator (калькулятор) с тремя методами:
+
+read() (читать) запрашивает два значения и сохраняет их как свойства объекта с именами a и b.
+sum() (суммировать) возвращает сумму сохранённых значений.
+mul() (умножить) перемножает сохранённые значения и возвращает результат.
+let calculator = {
+  // ... ваш код ...
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+
+----------------------------------------------------------------------------------------------------------
+мое решение 
+
+  let calculator = {}
+  calculator.read = function(){
+    calculator.a = +prompt("pervoe znachie","")
+    calculator.b = +prompt("vtaroe znachie","")
+  }
+  calculator.sum = function(){
+    let suma = calculator.a + calculator.b;
+    return suma;
+  }
+  calculator.mul = function(){
+    let multa = calculator.a * calculator.b;
+    return multa;
+  }
+
+
+  --------------------------------------------------------------------------
+
+  учебник
+
+
+  let calculator = {
+  sum() {
+    return this.a + this.b;
+  },
+
+  mul() {
+    return this.a * this.b;
+  },
+
+  read() {
+    this.a = +prompt('a?', 0);
+    this.b = +prompt('b?', 0);
+  }
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+
+
+мое решение работает но оно потеряет актуальность если придется вносить изменения. 
+лучше испрользовать this для таких задач, я его не использовал так как в задании не было об этом
+сказано. Но понимаю что лучше делать так
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+Создайте функцию-конструктор Calculator, которая создаёт объекты с тремя методами:
+
+read() запрашивает два значения при помощи prompt и сохраняет их значение в свойствах объекта.
+sum() возвращает сумму этих свойств.
+mul() возвращает произведение этих свойств.
+Например:
+
+let calculator = new Calculator();
+calculator.read();
+
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );
+
+------------------------------------------
+мое решение
+  let calculator = new Calculator()
+  function Calculator() {
+   this.read = function() {
+     this.a = +prompt("write number","");
+      this.b = +prompt("write number","");
+   }
+   this.sum = function() {
+     return this.a + this.b;
+   }
+   this.mul = function() {
+     return this.a * this.b
+   }
+  }
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );
+
+----------------------------------------------------------
+учебник 
+
+function Calculator() {
+
+  this.read = function() {
+    this.a = +prompt('a?', 0);
+    this.b = +prompt('b?', 0);
+  };
+
+  this.sum = function() {
+    return this.a + this.b;
+  };
+
+  this.mul = function() {
+    return this.a * this.b;
+  };
+}
+
+let calculator = new Calculator();
+calculator.read();
+
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );
+
+-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+

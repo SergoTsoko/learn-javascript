@@ -137,3 +137,13 @@ function ask(question, yes, no) {
     () => alert("Вы отменили выполнение.")
   );
   
+
+  let user = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50
+  }
+};
+let clone = user;
+console.log (clone)[keys]; 
